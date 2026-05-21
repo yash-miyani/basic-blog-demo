@@ -1,12 +1,11 @@
 require("dotenv").config();
 const express = require("express");
-const cors = require("cors")
+const cors = require("cors");
 const morgan = require("morgan");
 const { connectMongoDB } = require("./connection");
 const errorHandler = require("./utils/errorHandler");
 const postRouter = require("./routes/postRoutes");
 const authRouter = require("./routes/authRoutes");
-
 
 const app = express();
 const PORT = process.env.PORT;
@@ -19,7 +18,10 @@ process.on("uncaughtException", (err) => {
 });
 
 app.use(express.json());
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://basic-blog-demo-df5q.vercel.app",
+];
 
 const corsOptions = {
   origin: function (origin, callback) {
