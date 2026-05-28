@@ -234,6 +234,8 @@ export default function Posts() {
         </div>
       </div>
 
+      <AdComponent adSlot="9214589741" />
+
       {/* Add/Edit Modal */}
       <Modal
         isOpen={showForm}

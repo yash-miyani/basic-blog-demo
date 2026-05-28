@@ -24,7 +24,10 @@ const AdComponent: React.FC<AdComponentProps> = ({
   return (
     <ins
       className="adsbygoogle"
-      style={{ display: "block" }}
+      style={{
+        display: "block",
+        minHeight: "100px",
+      }}
       data-ad-client="ca-pub-3940256099942544"
       data-ad-slot={adSlot}
       data-ad-format={adFormat}
