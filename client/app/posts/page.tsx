@@ -117,7 +117,7 @@ export default function Posts() {
 
   return (
     <div className="min-h-screen bg-bg text-text p-6">
-      <AdComponent adSlot="9214589741" />
+      <AdComponent adSlot="1033173712" />
       <div className="max-w-7xl mx-auto bg-card border border-border p-6 shadow rounded-lg">
         <div className="flex justify-between mb-4">
           <h2 className="text-2xl font-bold">Posts</h2>
@@ -233,8 +233,6 @@ export default function Posts() {
           </button>
         </div>
       </div>
-
-      <AdComponent adSlot="9214589741" />
 
       {/* Add/Edit Modal */}
       <Modal

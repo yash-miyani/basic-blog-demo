@@ -2,15 +2,9 @@ import React, { useEffect } from "react";
 
 interface AdComponentProps {
   adSlot: string;
-  adFormat?: string;
-  adLayout?: string;
 }
 
-const AdComponent: React.FC<AdComponentProps> = ({
-  adSlot,
-  adFormat = "auto",
-  adLayout = "",
-}) => {
+const AdComponent: React.FC<AdComponentProps> = ({ adSlot }) => {
   useEffect(() => {
     try {
       ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push(
@@ -25,14 +19,12 @@ const AdComponent: React.FC<AdComponentProps> = ({
     <ins
       className="adsbygoogle"
       style={{
-        display: "block",
-        minHeight: "100px",
+        display: "inline-block",
+        width: "300px",
+        height: "250px",
       }}
       data-ad-client="ca-pub-3940256099942544"
       data-ad-slot={adSlot}
-      data-ad-format={adFormat}
-      data-ad-layout={adLayout}
-      data-full-width-responsive="true"
     ></ins>
   );
 };
